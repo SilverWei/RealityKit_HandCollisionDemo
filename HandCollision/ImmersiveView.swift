@@ -78,9 +78,6 @@ struct ImmersiveView: View {
             tracking: [.hand]
         )
         if let unavailableCapabilities = await SpatialTrackingSession().run(configuration) {
-            if unavailableCapabilities.anchor.contains(.world) {
-                fatalError("World tracking is not available on this device.")
-            }
             if unavailableCapabilities.anchor.contains(.hand) {
                 fatalError("Hand tracking is not available on this device.")
             }
