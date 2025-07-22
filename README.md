@@ -1,0 +1,1 @@
+在visionOS使用 RealityKit 中的 AnchorEntity，通过手部碰撞检测触发空间场景中物体的动画效果。

@@ -1,0 +1,250 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (485)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Cylinder", "Plane", "Sphere", "Sphere", "Hand", "Play"]
+    def Xform "Hand" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["Right", "Left"]
+        def Xform "Right" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["IndexFingerTip", "CreatePoint"]
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "IndexFingerTip" (
+                active = true
+            )
+            {
+                reorder nameChildren = ["PreviewSphere", "Anchoring", "CreatePoint"]
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Anchoring"
+                {
+                    uniform token info:id = "RealityKit.Anchoring"
+
+                    def RealityKitStruct "descriptor"
+                    {
+                        token location = "IndexFingerTip"
+                        token orientation = "Right"
+                        token type = "Hand"
+                    }
+                }
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.04, 0.04, 0.04)
+                        float radius = 0.02
+                        token shapeType = "Sphere"
+
+                        def RealityKitStruct "pose"
+                        {
+                        }
+                    }
+                }
+
+                def Sphere "PreviewSphere" (
+                    active = true
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/Hand/Right/IndexFingerTip/PreviewSphere/DefaultMaterial>
+                    double radius = 0.02
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    float3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Material "DefaultMaterial"
+                    {
+                        token outputs:mtlx:surface
+                        token outputs:realitykit:vertex
+                        token outputs:surface.connect = </Root/Hand/Right/IndexFingerTip/PreviewSphere/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                        def Shader "DefaultSurfaceShader"
+                        {
+                            uniform token info:id = "UsdPreviewSurface"
+                            color3f inputs:diffuseColor = (0, 0.98106676, 0.5736914) (
+                                colorSpace = "srgb_texture"
+                            )
+                            float inputs:roughness = 0.75
+                            token outputs:surface
+                        }
+                    }
+                }
+
+                def Xform "CreatePoint" (
+                    active = true
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    float3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def RealityKitCustomComponent "RealityKitContent_ObjectCreatePointComponent"
+                    {
+                        uniform token info:id = "RealityKitContent.ObjectCreatePointComponent"
+                    }
+                }
+            }
+        }
+
+        def Xform "Left"
+        {
+            float2 ui:nodegraph:node:pos = (20, 20)
+            int ui:nodegraph:node:stackingOrder = 1
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "IndexFingerTip" (
+                active = true
+            )
+            {
+                reorder nameChildren = ["PreviewSphere", "Anchoring", "CreatePoint"]
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                float3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def RealityKitComponent "Anchoring"
+                {
+                    uniform token info:id = "RealityKit.Anchoring"
+
+                    def RealityKitStruct "descriptor"
+                    {
+                        token location = "IndexFingerTip"
+                        token orientation = "Left"
+                        token type = "Hand"
+                    }
+                }
+            }
+        }
+    }
+
+    def Sphere "Sphere" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/Sphere/DefaultMaterial>
+        double radius = 0.1
+        float2 ui:nodegraph:node:pos = (20, 20)
+        int ui:nodegraph:node:stackingOrder = 1
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0.93609923, -0.799392)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitCustomComponent "RealityKitContent_ObjectComponent"
+        {
+            uniform token info:id = "RealityKitContent.ObjectComponent"
+        }
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/Sphere/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.46202266, 0.8382837, 1) (
+                    colorSpace = "srgb_texture"
+                )
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+
+        def RealityKitTimeline "Play"
+        {
+            float2 ui:nodegraph:node:pos = (20, 20)
+            int ui:nodegraph:node:stackingOrder = 1
+
+            def RealityKitTrack "Track"
+            {
+                def RealityKitAction "Emphasize"
+                {
+                    string actionKind = "emphasize"
+                    int blendLayer = 300
+                    double duration = 1
+                    uniform token info:id = "4E6B3DF1-0D78-49A3-B174-1D464B6817A2"
+                    token motionType = "blink"
+                    double startTime = 0
+                    rel target = </Root/Sphere>
+                }
+            }
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.2, 0.2, 0.2)
+                float radius = 0.1
+                token shapeType = "Sphere"
+
+                def RealityKitStruct "pose"
+                {
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            bool gravityEnabled = 0
+            uniform token info:id = "RealityKit.RigidBody"
+            token motionType = "Kinematic"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+}
+

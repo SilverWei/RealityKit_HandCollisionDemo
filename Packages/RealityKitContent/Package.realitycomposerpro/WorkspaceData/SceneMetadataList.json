@@ -1,0 +1,234 @@
+{
+  "087870EC-CD43-4331-8857-909154ABF85B" : {
+    "objectMetadataList" : [
+      [
+        "087870EC-CD43-4331-8857-909154ABF85B",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "1D17241E-5151-432C-8EC5-56CA8382EEC3" : {
+    "objectMetadataList" : [
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Sphere",
+        "Play"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Hand",
+        "Left",
+        "IndexFingerTip"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Sphere"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Hand"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Hand",
+        "Right",
+        "IndexFingerTip"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Hand",
+        "Left"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Hand",
+        "Right"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1D17241E-5151-432C-8EC5-56CA8382EEC3",
+        "Root",
+        "Sphere",
+        "Play",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "419601D4-98AD-42FB-BF6B-4DBF0A190DCD" : {
+    "objectMetadataList" : [
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Hand",
+        "Left"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Hand",
+        "Right",
+        "IndexFingerTip"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Sphere",
+        "Play"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Sphere"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Hand"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Sphere",
+        "Play",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "419601D4-98AD-42FB-BF6B-4DBF0A190DCD",
+        "Root",
+        "Hand",
+        "Right"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "C6A7F375-BFE9-46E0-9EA6-1A6B150F43FD" : {
+    "objectMetadataList" : [
+      [
+        "C6A7F375-BFE9-46E0-9EA6-1A6B150F43FD",
+        "Root",
+        "SkyDome"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "C6A7F375-BFE9-46E0-9EA6-1A6B150F43FD",
+        "Root",
+        "Video_Dock"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "C6A7F375-BFE9-46E0-9EA6-1A6B150F43FD",
+        "Root"
+      ],
+      {
+        "disallowsFraming" : false,
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "E1D80FE5-A466-4003-BCF2-0797567C6D56" : {
+    "objectMetadataList" : [
+      [
+        "E1D80FE5-A466-4003-BCF2-0797567C6D56",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
